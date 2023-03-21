@@ -16,3 +16,12 @@ variable "tags" {
 variable "vpc_id" {
   type = string
 }
+variable "listener_arn" {
+  type = string
+}
+variable "target_group_arn" {
+  type = string
+}
+variable "private_lb_tags" {
+  type = string
+}

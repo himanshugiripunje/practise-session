@@ -2,10 +2,10 @@ variable "tags" {
   type = map(string)
 }
 variable "public_subnet_cidr_block" {
-  type    = list(string)
+  type = list(string)
 }
 variable "private_subnet_cidr_block" {
-  type    = list(string)
+  type = list(string)
 }
 variable "public_tags" {
   type = map(string)

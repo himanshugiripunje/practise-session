@@ -5,11 +5,11 @@ resource "aws_vpc" "my_vpc" {
 }
 #create 2 public subnets now 
 resource "aws_subnet" "public_subnets" {
-  vpc_id            = aws_vpc.my_vpc.id
-  count             = length(var.public_subnet_cidr_block)
-  cidr_block        = var.public_subnet_cidr_block[count.index]
-  availability_zone = var.pub_availability_zones[count.index]
-  tags              = merge(var.tags, var.public_tags)
+  vpc_id                  = aws_vpc.my_vpc.id
+  count                   = length(var.public_subnet_cidr_block)
+  cidr_block              = var.public_subnet_cidr_block[count.index]
+  availability_zone       = var.pub_availability_zones[count.index]
+  tags                    = merge(var.tags, var.public_tags)
   map_public_ip_on_launch = true
 }
 

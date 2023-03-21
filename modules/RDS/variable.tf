@@ -15,36 +15,36 @@ variable "env" {
   type = string
 }
 variable "allocated_storage" {
-    type = number
+  type = number
 }
 variable "max_allocated_storage" {
-    type = number
+  type = number
 }
 variable "db_name" {
-  type = list
+  type = list(any)
 }
 variable "engine" {
   type = string
 }
 variable "engine_version" {
-  type    = string
+  type = string
 }
 variable "instance_class" {
-  type    = string
+  type = string
 }
 variable "skip_final_snapshot" {
-  type    = bool
+  type = bool
 }
 variable "username" {
-  type    = string
+  type = string
 }
 variable "password" {
-  type    = string
+  type = string
 }
 variable "parameter_group_name" {
-  type    = string
+  type = string
 }
 variable "tags" {
-  type = map(string)
+  type    = map(string)
   default = {}
 }
