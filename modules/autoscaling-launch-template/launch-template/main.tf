@@ -4,7 +4,6 @@ resource "aws_launch_template" "launch_template_private" {
   instance_type          = var.instance_type
   key_name               = var.key_name
   vpc_security_group_ids = [var.security_group_id]
-  user_data              = 
   block_device_mappings {
     device_name = "/dev/sda1"
     ebs {
